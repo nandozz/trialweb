@@ -1,7 +1,7 @@
 <html>
 
 <head>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+	<link href="wss://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
 
@@ -124,6 +124,7 @@
 			console.log("connecting to " + host + " " + port);
 			var x = Math.floor(Math.random() * 10000);
 			var cname = "orderform-" + x;
+			const WebSocket = require('ws');
 			mqtt = new Paho.MQTT.Client(host, port, cname);
 			//document.write("connecting to "+ host);
 			var options = {
